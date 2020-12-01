@@ -2,7 +2,9 @@
  * Set up a decent box model on the root element
  */
 html {
-  box-sizing: border-box; }
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
 
 /**
  * Make all elements from the DOM inherit from the parent box-sizing
@@ -13,23 +15,45 @@ html {
 *,
 *::before,
 *::after {
-  box-sizing: inherit; }
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
 
 /**
  * Basic styles for links
  */
 a {
   color: #e50050;
-  text-decoration: none; }
-  a:hover, a:active, a:focus {
-    color: #222222;
-    text-decoration: underline; }
+  text-decoration: none;
+}
+
+a:hover, a:active, a:focus {
+  color: #222222;
+  text-decoration: underline;
+}
+
+a:hover, a:active, a:focus {
+  text-decoration: none;
+}
+
+.container-supply {
+  width: 100%;
+  padding: 0 68px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
 
 /**
  * Basic typography style for copy text
  */
 body {
-  font-family: "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
+  font-family: "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
 
 /**
  * Clear inner floats
@@ -37,7 +61,8 @@ body {
 .clearfix::after {
   clear: both;
   content: '';
-  display: table; }
+  display: table;
+}
 
 /**
  * Hide text while making it readable for screen readers
@@ -49,7 +74,8 @@ body {
   padding: 0;
   /* 1 */
   text-indent: 101%;
-  white-space: nowrap; }
+  white-space: nowrap;
+}
 
 /**
  * Hide element while making it readable for screen readers
@@ -64,4 +90,226 @@ body {
   overflow: hidden;
   padding: 0;
   position: absolute;
-  width: 1px; }
+  width: 1px;
+}
+
+#header_supply .header-box:first-child {
+  padding: 28px 0 0px 0;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#header_supply .header-box:first-child img {
+  width: 200px;
+}
+
+#header_supply .header-box:first-child .header-box-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#header_supply .header-box:first-child .header-box-right .fa-search {
+  height: 17px;
+  margin-left: 14px;
+  color: #3e3e3e;
+}
+
+#header_supply .header-box:first-child .header-box-right .fa-globe {
+  margin-right: 10px;
+  color: #3e3e3e;
+}
+
+#header_supply .header-box:first-child .header-box-right h5 {
+  display: inline-block;
+  font-size: 13px;
+  color: #3e3e3e;
+  padding: 5px 15px;
+  border-left: 1px solid  #3e3e3e;
+  border-right: 1px solid  #3e3e3e;
+  text-transform: capitalize;
+}
+
+#header_supply .header-box:first-child .header-box-right h6 {
+  padding: 5px 10px;
+  border: none;
+  text-transform: capitalize;
+  font-size: 13px;
+  color: #3e3e3e;
+}
+
+#header_supply .header-box:first-child .header-box-right .header-el {
+  padding: 5px 10px 0 10px;
+  text-transform: capitalize;
+  border-right: 1px dotted #3e3e3e;
+}
+
+#header_supply .header-box:last-child {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  width: 100%;
+}
+
+#header_supply .header-box:last-child .navbar-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  padding: 0 15px;
+}
+
+#header_supply .header-box:last-child .navbar-nav a {
+  text-transform: capitalize;
+  font-size: 15px;
+  color: #515151;
+}
+
+#main_supply {
+  width: 100%;
+}
+
+#main_supply .section1 {
+  position: relative;
+  width: 100%;
+  background-color: #f6f6f6;
+  padding: 157px 0 130px 0;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+#main_supply .section1 img {
+  width: 474px;
+  max-width: 50%;
+  padding: 10px 0 13px 0;
+}
+
+#main_supply .section1 h5 {
+  font-size: 22px;
+  letter-spacing: 4.5px;
+  margin: 0;
+}
+
+#main_supply .section1 h6 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 17px;
+  letter-spacing: 1px;
+  margin-bottom: 25px;
+  color: #3e3e3e;
+  border-bottom: 1px solid #3e3e3e;
+}
+
+#main_supply .section1 h6 i {
+  margin-left: 20px;
+}
+
+#main_supply .section1-h6-1 {
+  margin-top: 65px;
+}
+
+#main_supply .section1-absolute {
+  position: absolute;
+  right: 0;
+  top: 150px;
+}
+
+#main_supply .section1-absolute a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 156px;
+  padding: 20px 0;
+  margin-top: 1px;
+  font-size: 12px;
+  color: white;
+  background-color: #333333;
+}
+
+#main_supply .section1-absolute a:nth-child(1) {
+  border-top-left-radius: 20px;
+}
+
+#main_supply .section1-absolute a:nth-child(2) {
+  border-bottom-left-radius: 20px;
+}
+
+#main_supply .section2 {
+  width: 100%;
+  background-color: #333333;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#main_supply .section2-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#main_supply .section2-box .navbar-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 995px;
+  position: relative;
+  max-width: 100%;
+}
+
+#main_supply .section2-box .navbar-nav a {
+  font-size: 19px;
+  color: #eaeaea;
+}
+
+#main_supply .section3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#main_supply .section3 h4 {
+  width: 100%;
+  font-size: 18px;
+  color: #222222;
+  text-align: center;
+  margin-top: 75px;
+}
+
+#main_supply .section3 h3 {
+  margin-top: 15px;
+  width: 100%;
+  font-size: 26px;
+  color: #222222;
+  text-align: center;
+}
+
+#main_supply .section3 h3 span {
+  font-size: 43px;
+}
+/*# sourceMappingURL=main.css.map */

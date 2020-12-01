@@ -1,3 +1,65 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
+
+#header_supply{
+    .header-box:first-child{
+        padding: 28px 0 0px 0;
+        order: 1;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        img{
+            width: 200px;
+        }
+        .header-box-right{
+            display: flex;
+            .fa-search{
+                height: 17px;
+                margin-left: 14px;
+                color: #3e3e3e;
+            }
+            .fa-globe{
+                margin-right: 10px;
+                color: #3e3e3e;
+            }
+            h5{
+                display: inline-block;
+                font-size: 13px;
+                color: #3e3e3e;
+                padding: 5px 15px;
+                border-left: 1px solid  #3e3e3e;
+                border-right: 1px solid  #3e3e3e;
+                text-transform: capitalize;
+            }
+            h6{
+                padding: 5px 10px;
+                border:none;
+                text-transform: capitalize;
+                font-size: 13px;
+                color: #3e3e3e;
+            }
+            .header-el{
+                padding: 5px 10px 0 10px;
+                text-transform: capitalize;
+                border-right: 1px dotted #3e3e3e;
+            }
+        }
+    }
+    .header-box:last-child{
+        order: 2;
+        width: 100%;
+        .navbar-nav{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            padding: 0 15px;
+            a{
+                text-transform: capitalize;
+                font-size: 15px;
+                color: #515151;
+            }
+            
+        }
+    }
+}
